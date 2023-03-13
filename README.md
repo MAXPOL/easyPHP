@@ -28,3 +28,7 @@ CREATE TABLE students
 
 id INT AI / firstname VARCHAR(100) / lastname VARCHAR(100) / surname VARCHAR(100) / address TEXT / phone TEXT / other TEXT
 
+CREATE TABLE auth
+
+id INT AI / login VARCHAR(100) / password VARCHAR(255)
+
