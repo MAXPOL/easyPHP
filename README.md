@@ -2,7 +2,7 @@
 
 For setting easy web server use:
 
-yum install -y httpd mariadb mariadb-server php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo
+yum install -y httpd nano wget unzip mariadb mariadb-server php php-mcrypt php-cli php-gd php-curl php-mysql php-ldap php-zip php-fileinfo
 
 systemctl enable mariadb && systemctl enable httpd && systemctl start mariadb && systemctl start httpd
 
