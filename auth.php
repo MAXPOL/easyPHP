@@ -23,11 +23,11 @@ if (isset ($_POST['auth'])) {
     <center><h2>Authorization</h2>
     <form action="" method="post">
         <br>
-      <label>Enter login</label>
-      <input type="login" name="auth_login" placeholder="Введите Ваш логин" required >
+      <label>Login</label>
+      <input type="login" name="auth_login" placeholder="Enter login" required >
         <br><br><br>
-      <label>Enter password</label>
-      <input type="password" name="auth_pass" placeholder="Введите пароль" required >
+      <label>Password</label>
+      <input type="password" name="auth_pass" placeholder="Enter password" required >
         <br><br><br>
       <button type="submit" name="auth">Enter</button>
     </form>
