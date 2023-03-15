@@ -18,16 +18,16 @@ if (isset ($_POST['auth'])) {
 }
 
 ?>
-    <center><h2>Авторизация</h2>
+    <center><h2>Authorization</h2>
     <form action="" method="post">
         <br>
-      <label>Введите Ваш логин</label>
+      <label>Enter login</label>
       <input type="login" name="auth_login" placeholder="Введите Ваш логин" required >
         <br><br><br>
-      <label>Введите Ваш пароль</label>
+      <label>Enter password</label>
       <input type="password" name="auth_pass" placeholder="Введите пароль" required >
         <br><br><br>
-      <button type="submit" name="auth">Войти</button>
+      <button type="submit" name="auth">Enter</button>
     </form>
 
 <?php
