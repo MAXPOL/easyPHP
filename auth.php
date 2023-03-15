@@ -11,9 +11,11 @@ if (isset ($_POST['auth'])) {
 
         $query = 'SELECT id FROM auth WHERE login LIKE $login';
 
-        $chekIssetID =  mysqli_query($conn, $query);
+        $result = $conn->query($query);
 
-        echo $chekIssetID;
+        while ($row = mysqli_fetch_assoc($result)) {
+                printf($row["id"]);
+        }
 
 }
 
