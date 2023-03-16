@@ -1,10 +1,24 @@
 <?php
 
+session_start();
+
 require "dbconnect.php";
 
-if (isset ($GLOBALS['verified'])) {
+if ($_SESSION['verified'] == '1') {
 
+$username = $_POST['auth_login'];
 echo "<center><h2>Authorization complete</h2>";
+echo "Hello $username";
+?>
+        <br><br>
+    <form action="logout.php">
+      <button type="submit" >Logout</button>
+    </form>
+        <br>
+   <form action="students.php">
+      <button type="submit" >Students</button>
+    </form>
+<?php
 
 } else {
 
@@ -19,17 +33,15 @@ if (isset ($_POST['auth'])) {
 
         $result = $conn->query($query);
 
-        $row = mysqli_fetch_assoc($result)
-
-        if (isset ($row) && !empty ($row)) {
-        $GLOBALS[$verified] = 1;
-        }
-
         while ($row = mysqli_fetch_assoc($result)) {
-                printf($row["id"]);
-       }
+                $chekauth = $row["id"];
+                if ($chekauth == 1) {
+                $_SESSION['verified'] = '1';
+                $_COOKIE['username'] = $login;
+                }
+        }
 }
-}
+
 ?>
     <center><h2>Authorization</h2>
     <form action="" method="post">
@@ -42,3 +54,8 @@ if (isset ($_POST['auth'])) {
         <br><br><br>
       <button type="submit" name="auth">Enter</button>
     </form>
+<?php
+
+}
+
+?>
